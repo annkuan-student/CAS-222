@@ -1,0 +1,23 @@
+#project_mixins {
+
+    .commonProperties(@bg_color, @font_size, @body_margin){
+    background-color: @bg_color;
+    font-size: @font_size;
+    margin: @body_margin;
+    }
+
+    .size(@font_size){
+    font-size: @font_size;
+    }
+
+    .color(@color){
+    color: @color;
+    }
+}
+
+mixin_test {
+    
+    .sizee(@font_size){
+        font-size: @font_size;
+    }
+}

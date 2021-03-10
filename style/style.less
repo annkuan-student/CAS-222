@@ -1,0 +1,599 @@
+/*File Name: style.less
+Date: 2/11/2021
+Programmer: Ann Kuan
+*/
+
+/* VARIABLES */
+
+/* colors */
+
+@baseColor: white;
+@mBgColor: @baseColor;
+@footerColor: #FF0000;
+
+/* sizes */
+
+@mFontSize: 12pt;
+@tFontSize: @mFontSize * 1.2;
+@dFontSize: @mFontSize * 1.4;
+@h1FontSize: 1.75em;
+@h2FontSize: @h1FontSize * .7;
+@h3FontSize: @h1FontSize * .55;
+
+/* margins */
+
+@mMainMargin: 0 1em;
+@tMainMargin: 0 2em;
+@dMainMargin: 0 5em;
+
+
+/* padding */
+
+@mMainPadding: 1em 1em 1em;
+@tMainPadding: 2em 2em 2em;
+@mFooterPadding: 1em 1em;
+@tFooterPadding: 2em 2em;
+@dFooterPadding: 2em 3em;
+
+/* MOBILE STYLES */
+
+body {
+	font-family: 'Roboto Condensed';
+	line-height: 40px;
+}
+
+main {
+	padding: 0;
+    margin: 0;
+
+}
+
+br {
+    line-height: .5em;
+}
+
+p {
+	line-height: 1.25;
+	font-family: 'Roboto Condensed';
+    font-size: @mFontSize;
+}
+
+h1 {
+    font-size: 20pt;
+}
+
+header {
+    height: 130px;
+	border: none;
+	line-height: auto;
+	padding-top: 1em;
+    background-image: url(../images/birdviewrunning.jpg);
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+header img {
+    width: 70%;
+    padding-left: 3em;
+}
+
+.hamburger {
+	background: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	line-height: 45px;
+	color: #FF0000;
+	border: 0;
+	font-size: 1.4em;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+	z-index: 10;
+	padding: 5px 15px 0;
+}
+
+.cross {
+	background: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #FF0000;
+	border: 0;
+	font-size: 3em;
+	line-height: 65px;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+	z-index: 10;
+	padding: 7px 15px 0;
+}
+
+.menu {
+	z-index: 10;
+	font-weight: 700;
+	width: 50%;
+	background: #f1f1f1;
+	position: absolute;
+	top: 50px;
+	right: 0;
+	text-align: center;
+	font-size: 12px;
+}
+
+.menu ul {
+	list-style-type: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu li {
+	display: block;
+	border-bottom: #ddd 1px solid;
+	padding: 15px 0;
+}
+
+.menu li:hover {
+	display: block;
+	background: #999999;
+	border-bottom: #ddd 1px solid;
+	padding: 15px 0;
+}
+
+.menu ul li a {
+	text-decoration: none;
+	color: white;
+	margin: 0;
+}
+
+.menu ul li a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+nav {
+	background-color: #FF0000;
+	font-weight: bold;
+	text-align: center;
+	font-size: @mFontSize;
+    
+}
+
+.fixedbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.navigation nav {
+	display: none;
+	list-style-type: none;
+	margin: 1em;
+}
+
+nav li {}
+
+nav a {
+	text-decoration: none;
+	padding: 1px;
+	font-size: 1em;
+	border-bottom: 1px;
+}
+
+nav a:link {
+	color: white;
+}
+
+nav a:visited {
+	color: white;
+}
+
+nav a:hover {
+	color: black;
+}
+
+footer {
+    color: white;
+    background-color: @footerColor;
+    height: 100px;
+    padding: @mFooterPadding;
+    text-align: center;
+}
+
+footer img {
+    width: 50px;
+}
+
+table {
+    background-color: #25262a;
+    width: 100%;
+    line-height: 30px;
+    margin: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    color: white
+}
+
+th, td {
+    text-align: left;
+    padding: 0 1em 0 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-size: 20px;
+    text-decoration: bold;
+    height: 40px;
+    background-color: #FF0000;
+}
+
+tr:nth-child(even) {
+    background-color: black;
+}
+
+ul {
+    font-size: @mFontSize;
+    font-family: 'Roboto Condensed';
+}
+
+li {
+    padding-left: 2em;
+    padding-right: 2em;
+    line-height: 20px;
+}
+
+div {
+    padding: @mMainPadding;
+    margin: @mMainMargin;
+}
+
+input, select, textarea {
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#registrationform {
+    padding: @mMainPadding;
+    margin: @mMainMargin;
+}
+
+#FAQ {
+    display: none;
+    padding: @mMainPadding;
+    margin: @mMainMargin;
+}
+
+#aboutevent {
+    padding: @mMainPadding;
+    margin: @mMainMargin;
+}
+
+#whattobring {
+    padding: @mMainPadding;
+    margin: @mMainMargin;
+    display: none;
+}
+
+#registrationform {
+    padding: @mMainPadding;
+    margin: @mMainMargin;
+}
+
+.accordion {
+  background-color: #FF0000;
+  color: white;
+  cursor: pointer;
+  padding: .5em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  display: none;
+  background-color: white;
+  overflow: hidden;
+    padding: @mMainPadding;
+    margin: @mMainMargin;
+}
+
+.socialfeeds {
+    display: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.registerbutton button {
+        display: inherit;
+        margin: auto;
+        height: 60px;
+        width: 100px;
+        background-color: #FF0000;
+        color: white;
+        border: 2px solid #FF0000;
+    border-radius: 4px;
+    width: 100%;
+        font-size: 15pt;
+        font-family: 'Roboto Condensed';
+}
+
+.weather {
+    float: right;
+}
+
+.collage {
+    background-image: url(../images/collage2.png);
+    height: 100px;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    margin: 0;
+}
+
+.upcomingevents {
+    background-color: red;
+    color: white;
+}
+
+.about {
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+#sponsors p {
+    padding-top: 1em;
+    text-align: center;
+    font-size: 17pt;
+}
+
+/* Tablet CSS code and up */
+
+
+@media only screen and (min-width: 481px) {
+	body {
+		margin: 0px;
+		padding: 0px;
+		background-image: none;
+	}
+    
+    h1 {
+    font-size: 25pt;
+}
+    
+    header {
+        height: 200px;
+    }
+    
+  header img {
+   width: 30%;
+      float: left;
+}
+
+    
+    .hamburger {
+		display: none;
+	}
+	.cross {
+		display: none;
+	}
+    
+    .navigation nav {
+		display: block;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	nav {
+		float: right;
+		width: 60%;
+        font-size: @mFontSize;
+        
+	}
+	nav li {
+		display: inline-block;
+        padding: .5em;
+        width: auto;
+	}
+	nav a {
+		padding-right: .5em;
+	}
+	main {
+		padding: @tMainPadding;
+        margin: @tMainMargin;
+	}
+    
+    p {
+        font-size: @tFontSize;
+    }
+    
+    input, select, {
+        padding: 1em;
+    }
+    
+	footer {
+		padding: @tFooterPadding;
+        height: 150px;
+	}
+    
+    table {
+        width: 50%;
+    }
+    
+    th {
+    font-size: 25px;
+    text-decoration: bold;
+        text-align: center;
+}
+    td {
+        text-align: center;
+    }
+    
+    #FAQ {
+        display: inherit;
+    }
+    
+    #whattobring {
+        display: inherit;
+    }
+    
+    button {
+        display: none
+    }
+    .panel {
+        display: none;
+    }
+    
+    .panel .weather {
+        display: none;
+    }
+    
+    .socialfeeds {
+        display: inherit;
+        margin: auto;
+    }
+    
+
+    .column {
+        flex: 27%;
+        max-width: 27%;
+        padding: 0 4px;
+    }
+    .registerbutton button {
+        
+        height: 60px;
+        width: 300px;
+        
+    }
+    
+    .collage {
+    background-image: url(../images/collage2.png);
+    height: 100px;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    margin: 0;
+    }
+    
+    .upcomingevents h1, p {
+        padding-bottom: 1em;
+    }
+
+
+}
+
+
+/* Desktop CSS code and up */
+
+@media only screen and (min-width: 1025px) {
+    main {
+        margin: @dMainMargin;
+    }
+    h1 {
+    font-size: 30pt;
+}
+    
+    p {
+        font-size: @dFontSize;
+    }
+    
+    header {
+		height: 300px;
+		
+	}
+	.hamburger {
+		display: none;
+	}
+	.cross {
+		display: none;
+	}
+    
+    header img {
+    width: 30%;
+    padding-left: 2em;
+      float: left;
+}
+    nav {
+        float: right;
+        width: 60%;
+        font-size: @dFontSize;
+    }
+	.navigation nav {
+        background-color: #FF0000;
+		display: block;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+    nav a {
+		padding-right: 2em;
+	}
+    footer {
+        padding: @dFooterPadding;
+    }
+    form {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    table {
+        width: 300px;
+    }
+    
+    .registerbutton button {
+        height: 60px;
+        width: 400px;
+        font-size: 20pt;
+        color: white;
+    }
+    .fb {
+        float: left;
+        width: 40%;
+    }
+    
+    .twitter {
+        float: right;
+        width: 40%;
+    }
+    
+    .socialfeeds:after {
+        content: "";
+  display: table;
+  clear: both;
+    }
+    
+    .collage {
+        height: 150px;
+    }
+    .upcomingevents {
+    padding-top: 2em;
+        padding-bottom: 2em;
+}
+    
+    
+}
